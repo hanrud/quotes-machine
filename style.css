@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 100px 0 200px;
+  font-family: 'Open Sans', sans-serif;
+  background: url(images/background.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+main {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.quote-content {
+  margin-bottom: 40px;
+  padding: 10px;
+  font-family: 'Courgette', cursive;
+}
+
+i {
+  margin-right: 5%;
+}
+
+p.quote {
+  font-size: 1.2em;
+}
+
+p.author {
+  text-align: right;
+  font-size: 0.8em;
+}
+
+.button-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  width: 30%;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  background: #CC737C;
+  border-radius: 10px;
+  border: transparent;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #bb626b;
+}
+
+button.twitt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
