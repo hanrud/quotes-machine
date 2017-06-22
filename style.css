@@ -4,10 +4,11 @@
 
 body {
   margin: 0;
-  padding: 100px 0 200px;
+  padding: 120px 0;
   font-family: 'Open Sans', sans-serif;
   background: url(images/background.jpg) no-repeat bottom center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -20,7 +21,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
 }
 
@@ -49,7 +50,7 @@ p.author {
 }
 
 button {
-  width: 30%;
+  width: 35%;
   padding: 10px;
   font-family: 'Open Sans', sans-serif;
   background: #CC737C;
