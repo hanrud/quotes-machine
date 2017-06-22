@@ -1,13 +1,13 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-var quote;
-var author;
+  var quote;
+  var author;
 
   function getNewQuote() {
     $.ajax({
       url: 'http://api.forismatic.com/api/1.0/',
       jsonp: 'jsonp',
-      dataType:'jsonp',
+      dataType: 'jsonp',
       data: {
         method: 'getQuote',
         lang: 'en',
@@ -24,13 +24,18 @@ var author;
         }
       }
     });
-
   }
 
-getNewQuote();
-
-$('.get-quote').on('click', function(event) {
-  event.preventDefault();
   getNewQuote();
-})
+
+  $('.get-quote').on('click', function(event) {
+    event.preventDefault();
+    getNewQuote();
+  });
+
+  $('.twitt').on('click', function(event) {
+    console.log('twitt');
+    event.preventDefault();
+    window.open('https://twitter.com/intent/tweet?text=' + quote + ' - ' + author, null, 'height=420,width=550,status=yes,toolbar=no,menubar=no,location=no');
+  })
 });
