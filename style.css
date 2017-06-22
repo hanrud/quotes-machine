@@ -4,8 +4,8 @@
 
 body {
   margin: 0;
-  padding: 100px 0;
-  font-family: 'Open Sans', sans-serif;
+  padding: 5%;
+  font-family: 'Courgette', cursive;
   background: url(images/background.jpg) no-repeat bottom center;
   background-size: cover;
   background-attachment: fixed;
@@ -14,10 +14,11 @@ body {
 h1 {
   text-align: center;
   color: rgb(255, 255, 255);
+  font-size: 2.5em;
+  text-shadow: 1px 1px #785E6B;
 }
 
 main {
-  width: 60%;
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
@@ -25,33 +26,50 @@ main {
   border-radius: 10px;
 }
 
+
 .quote-content {
   margin-bottom: 40px;
   padding: 10px;
-  font-family: 'Courgette', cursive;
-}
-
-i {
-  margin-right: 5%;
+  position: relative;
 }
 
 p.quote {
   font-size: 1.2em;
+  text-align: center;
+}
+
+p.quote::before, p.quote::after {
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+}
+
+p.quote::before {
+  content: "\f10e";
+  margin-bottom: 10px;
+  top: 0;
+  left: 0;
+}
+
+p.quote::after {
+  content: "\f10d";
+  right: 0;
 }
 
 p.author {
   text-align: right;
   font-size: 0.8em;
+  margin-top: 50px;
 }
 
 .button-content {
-  display: flex;
-  justify-content: space-around;
+  text-align: center;
 }
 
 button {
-  width: 35%;
-  padding: 10px;
+  min-height: 60px;
+  width: 100%;
+  margin-bottom: 20px;
   font-family: 'Open Sans', sans-serif;
   background: #CC737C;
   border-radius: 10px;
@@ -59,6 +77,8 @@ button {
   color: #fff;
   font-weight: 600;
   font-size: 0.9em;
+  transition: transform ease 0.5s;
+  transition: background-color ease-in-out 0.2s;
 }
 
 button:hover {
@@ -66,8 +86,48 @@ button:hover {
   background-color: #bb626b;
 }
 
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
 button.twitt {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+i.fa-twitter {
+  margin-right: 5%;
+}
+
+p.caption {
+  text-align: center;
+  font-size: 0.8em;
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    padding: 100px 5% 0;
+  }
+  main {
+    width: 80%;
+  }
+  .button-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  button {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  main {
+    width: 60%;
+  }
 }
